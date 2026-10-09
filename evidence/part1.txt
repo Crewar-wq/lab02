@@ -1,0 +1,22 @@
+=== Task 1: basic interfaces ===
+Point(10, 20)
+Circle: radius=5
+Rectangle: 4 x 6
+=== Task 2: interface inheritance ===
+Circle: area=78.54, perimeter=31.42
+Rectangle: area=24.00, perimeter=20.00
+Cube: area=54.00, perimeter=36.00
+Cube volume=27.00
+=== Task 3: interface segregation ===
+Legacy Printer.Scan: empty unsupported operation
+Printer: Laboratory report
+Scanned document
+MFD print: Copy
+MFD scanned document
+MFD fax to 12345: Report
+=== Task 4: polymorphism ===
+Credit card payment: 1500.00
+Cash payment: 250.00
+LOG: Work started
+LOG: Work completed
+File log written

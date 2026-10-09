@@ -1,0 +1,33 @@
+PASS: Move changes coordinates
+PASS: Circle area
+PASS: Circle perimeter
+PASS: Rectangle area and perimeter
+PASS: Cube formulas
+PASS: Reject zero radius
+PASS: Reject NaN edge
+PASS: Reject negative payment
+PASS: Printer follows ISP
+PASS: MFD implements all device contracts
+PASS: File logger writes messages
+PASS: One Unit of Work saves related entities
+PASS: Sync read
+PASS: Author search
+PASS: Price range includes both boundaries
+PASS: Price range excludes lower priced books
+PASS: Fractional range boundary does not round down
+PASS: Reject reversed price range
+PASS: Exact monetary value survives SQLite roundtrip
+PASS: Business service rejects fractional kopecks
+PASS: Async create and read
+PASS: Async update persists
+PASS: Async specialized search
+PASS: Async delete
+PASS: Sync delete
+PASS: Missing entity reports not found
+PASS: Foreign key violation aborts Unit of Work
+PASS: Failed Unit of Work leaves no partial inserts
+PASS: Valid user request
+PASS: Reject plaintext password field
+PASS: Reject short login
+PASS: Reject missing hash
+CHECKS PASSED: 32

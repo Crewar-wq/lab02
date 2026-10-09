@@ -1,0 +1,21 @@
+PASS: POST /user -> 201
+PASS: GET /user/1 -> 200
+PASS: POST /user -> 409
+PASS: POST /user -> 409
+PASS: POST /user -> 400
+PASS: POST /user -> 400
+PASS: POST /user -> 400
+PASS: POST /user -> 400
+PASS: POST /user -> 415
+PASS: GET /user/0 -> 400
+PASS: POST /user -> 201
+PASS: PUT /user/1 -> 409
+PASS: PUT /user/1 -> 200
+PASS: GET /user/1 -> 200
+PASS: DELETE /user/1 -> 200
+PASS: GET /user/1 -> 404
+PASS: PUT /user/1 -> 404
+PASS: DELETE /user/1 -> 404
+PASS: DELETE /user/2 -> 200
+PASS: GET /missing-route -> 404
+HTTP CHECKS PASSED: 20

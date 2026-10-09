@@ -1,0 +1,218 @@
+[
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "student_1791569072167388087",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 201,
+    "Response": {
+      "Id": 1,
+      "Login": "student_1791569072167388087"
+    }
+  },
+  {
+    "Method": "GET",
+    "Path": "/user/1",
+    "Request": null,
+    "Status": 200,
+    "Response": {
+      "Id": 1,
+      "Login": "student_1791569072167388087"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "student_1791569072167388087",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 409,
+    "Response": {
+      "Message": "Login already exists"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "STUDENT_1791569072167388087",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 409,
+    "Response": {
+      "Message": "Login already exists"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "valid_login",
+      "PassHash": "plaintext"
+    },
+    "Status": 400,
+    "Response": {
+      "Message": "PassHash must be a SHA-256 hash: 64 hexadecimal characters"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "x",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 400,
+    "Response": {
+      "Message": "Login must contain 3-50 letters, digits, _, . or -"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "valid_login"
+    },
+    "Status": 400,
+    "Response": {
+      "Message": "PassHash must be a SHA-256 hash: 64 hexadecimal characters"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": null,
+    "Status": 400,
+    "Response": {
+      "Message": "Invalid JSON request or content type"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": null,
+    "Status": 415,
+    "Response": {
+      "Message": "HTTP request failed"
+    }
+  },
+  {
+    "Method": "GET",
+    "Path": "/user/0",
+    "Request": null,
+    "Status": 400,
+    "Response": {
+      "Message": "Id must be positive"
+    }
+  },
+  {
+    "Method": "POST",
+    "Path": "/user",
+    "Request": {
+      "Login": "other_1791569072167388087",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 201,
+    "Response": {
+      "Id": 2,
+      "Login": "other_1791569072167388087"
+    }
+  },
+  {
+    "Method": "PUT",
+    "Path": "/user/1",
+    "Request": {
+      "Login": "other_1791569072167388087",
+      "PassHash": "081841e9d6dfb8feba919658aabff6079fe1107229710a8615d27c0ba68e460e"
+    },
+    "Status": 409,
+    "Response": {
+      "Message": "Login already exists"
+    }
+  },
+  {
+    "Method": "PUT",
+    "Path": "/user/1",
+    "Request": {
+      "Login": "student_1791569072167388087_new",
+      "PassHash": "d67e2e944994496c8d8ec76eed0cf9f09679448d584b532bebf941852a37f5ed"
+    },
+    "Status": 200,
+    "Response": {
+      "Id": 1,
+      "Login": "student_1791569072167388087_new"
+    }
+  },
+  {
+    "Method": "GET",
+    "Path": "/user/1",
+    "Request": null,
+    "Status": 200,
+    "Response": {
+      "Id": 1,
+      "Login": "student_1791569072167388087_new"
+    }
+  },
+  {
+    "Method": "DELETE",
+    "Path": "/user/1",
+    "Request": null,
+    "Status": 200,
+    "Response": {
+      "Id": 1,
+      "Message": "User deleted"
+    }
+  },
+  {
+    "Method": "GET",
+    "Path": "/user/1",
+    "Request": null,
+    "Status": 404,
+    "Response": {
+      "Message": "User not found"
+    }
+  },
+  {
+    "Method": "PUT",
+    "Path": "/user/1",
+    "Request": {
+      "Login": "student_1791569072167388087_new",
+      "PassHash": "d67e2e944994496c8d8ec76eed0cf9f09679448d584b532bebf941852a37f5ed"
+    },
+    "Status": 404,
+    "Response": {
+      "Message": "User not found"
+    }
+  },
+  {
+    "Method": "DELETE",
+    "Path": "/user/1",
+    "Request": null,
+    "Status": 404,
+    "Response": {
+      "Message": "User not found"
+    }
+  },
+  {
+    "Method": "DELETE",
+    "Path": "/user/2",
+    "Request": null,
+    "Status": 200,
+    "Response": {
+      "Id": 2,
+      "Message": "User deleted"
+    }
+  },
+  {
+    "Method": "GET",
+    "Path": "/missing-route",
+    "Request": null,
+    "Status": 404,
+    "Response": {
+      "Message": "HTTP request failed"
+    }
+  }
+]

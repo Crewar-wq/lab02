@@ -1,0 +1,13 @@
+=== Create author and book in one Unit of Work ===
+Saved entities: 2
+=== Read ===
+Id=1 | Clean Code | 990.00 | Robert Martin
+By author: 1
+Price 900..1000: 1
+=== Update through business service ===
+Updated price: 790.00
+=== Async CRUD ===
+Async read: Clean Architecture
+Async updated price: 1100.00
+Books after delete: 1
+SQLite database saved

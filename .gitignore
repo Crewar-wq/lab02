@@ -1,0 +1,11 @@
+bin/
+obj/
+artifacts/
+*.db
+*.db-shm
+*.db-wal
+*.log
+.vs/
+.idea/
+__pycache__/
+*.pyc

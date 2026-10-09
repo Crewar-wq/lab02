@@ -1,0 +1,15 @@
+CREATE TABLE "Authors" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Authors" PRIMARY KEY AUTOINCREMENT,
+    "Name" TEXT NOT NULL
+);
+
+CREATE TABLE "Books" (
+    "Id" INTEGER NOT NULL CONSTRAINT "PK_Books" PRIMARY KEY AUTOINCREMENT,
+    "Title" TEXT NOT NULL,
+    "Price" INTEGER NOT NULL,
+    "AuthorId" INTEGER NOT NULL,
+    CONSTRAINT "CK_Books_Price" CHECK (Price >= 0),
+    CONSTRAINT "FK_Books_Authors_AuthorId" FOREIGN KEY ("AuthorId") REFERENCES "Authors" ("Id") ON DELETE RESTRICT
+);
+
+CREATE INDEX "IX_Books_AuthorId" ON "Books" ("AuthorId");
